@@ -1,0 +1,60 @@
+{
+    "label": "Watson - Tone Analyzer",
+    "name": "watson-tone-analyzer",
+    "apiVersion": "v1",
+    "internal": true,
+    "configurationType": "GLOBAL",
+    "deployment": {
+        "jsEndpoint": true,
+        "profiles":[
+            {
+                "name": "default",
+                "label": "Default",
+                "memory": 96,
+                "description": "Default configuration"
+            }
+        ],
+        "allowMultipleInstances": false
+    },
+    "icon48": "https://storage.googleapis.com/static.slingrs.io/platform/endpoints/watson-tone-analyzer.png",
+    "status": "ACTIVE",
+    "stores": [],
+    "events": [],
+    "functions": [
+        {
+            "label": "GET",
+            "name": "get",
+            "description": "Sends a GET request"
+        },
+        {
+            "label": "POST",
+            "name": "post",
+            "description": "Sends a POST request"
+        }
+    ],
+    "scripts":[
+        "helpers.js"
+    ],
+    "configuration":[
+        {
+            "name": "username",
+            "label": "Username",
+            "description": "Username provided in the service credentials.",
+            "type": "text",
+            "required": true
+        },
+        {
+            "name": "password",
+            "label": "Password",
+            "description": "Password provided in the service credentials.",
+            "type": "password",
+            "required": true
+        },
+        {
+            "name": "configuration",
+            "label": "Configuration",
+            "value": "You authenticate to the Tone Analyzer API by providing the username and password that are provided in the service credentials for the service instance that you want to use.<br><b>Note:</b> Service credentials are different from your Bluemix account username and password.",
+            "type": "info"
+        }
+    ]
+}
